@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="options">
+    <button onclick="toggleDarkMode()">Toggle dark mode</button>
+    <button onclick="logout()">Log Out</button>
+    </div>
+
+    <h1>Inventory Management System</h1>
+
+    <div id="container">
+        <form id="addForm" autocomplete="off">
+        <input type="text" id="addItemName" placeholder="Item Name">
+        <input type="text" id="addItemAssignee" placeholder="Assignee">
+        <button type="submit">Add Item</button>
+        </form>
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>Asset Tag</th>
+                    <th>Item Type</th>
+                    <th>Assignee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="inventory">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <br><br>
+
+    <div id="container">
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>User</th>
+                    <th>Item</th>
+                    <th>Reason</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="request-table">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>

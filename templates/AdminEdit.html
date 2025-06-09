@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div id="options">
+    <button onclick="toggleDarkMode()">Toggle dark mode</button>
+    <button onclick="logout()">Log Out</button>
+    </div>
+
+    <h1>Inventory Management System</h1>
+
+    <div id="container">
+        <form id="editForm">
+            <input type="hidden" id="itemId" value="{{ item.id }}">
+            <label>New Assignee:</label>
+            <input type="text" id="assigneeInput" value="{{ item.assignee }}"><br><br>   
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/edit.js') }}"></script>
+</body>
+</html>
+

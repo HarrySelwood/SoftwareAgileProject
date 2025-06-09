@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="options">
+    <button onclick="toggleDarkMode()">Toggle dark mode</button>
+    <button onclick="logout()">Log Out</button>
+    </div>
+
+    <h1>Inventory Management System</h1>
+    <h2>Your Assigned Items</h2>
+    <div id="container">
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>Asset Tag</th>
+                    <th>Item Type</th>
+                    <th>Assignee</th>
+                </tr>
+            </thead>
+            <tbody id="user-inventory">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <h2>Request New Items</h2>
+    <div id="container">
+        <form id="request-form" autocomplete="off">
+            <input type="text" id="requestItem" placeholder="Item Name" required>
+            <input type="text" id="requestReason" placeholder="Reason" required>
+            <button type="submit">Request Item</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/general.js') }}"></script>
+</body>
+</html>
