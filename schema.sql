@@ -1,7 +1,11 @@
-CREATE TABLE inventory ( 
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    item_name TEXT NOT NULL, 
-    assignee TEXT NOT NULL 
+DROP TABLE IF EXISTS inventory;
+DROP TABLE IF EXISTS requests;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE inventory (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    item_name TEXT NOT NULL,
+    assignee TEXT NOT NULL
 );
 
 CREATE TABLE requests (
